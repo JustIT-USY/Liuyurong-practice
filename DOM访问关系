@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM访问关系</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+       <div id="box" >
+           <button class="btn">按钮</button>
+           <span id="span
+">
+               <a href="#">百度一下</a>
+           </span>
+           <p>我是MT</p>
+           <div>hhh</div>
+       </div>
+<script type="text/html">
+    window.onload=function () {
+        var a =document.getElementByTagname("a")[0];
+        console.log(a);
+        //通过a标签来得到它的父节点
+        var parentNode=a.parentNode;
+        console.log(parentNode);
+       // var parentNode=a.parentNode.parentNode;拿到父节点的父节点
+    }
+
+</script>
+<script type="text/html">
+    window.onload=function () {
+        //1.通过子盒子设置父盒子的颜色
+
+        var btn=document.getElementsByClassName("btn")[0];
+        btn.onclick=function () {
+            var span=document.getElementById("span");
+            var box=span.parentNode;
+            box.style.backgroundColor="red";
+        }
+
+    }
+</script>
+<script type="text/html">
+    window.onload=function () {
+        //1.获取标签
+        var close=document.getElementsById("close");
+
+        //2.监听点击事件
+        close.onclick=function () {
+            this.parentNode.style.display("none");
+        }
+    }
+
+</script>
+<script type="text/html">
+    //兄弟节点
+    window.onload=function () {
+        var span=document.getElementById("span");
+        //获取下一个相邻的兄弟节点
+        var next=span.nextElementSibling||span.nextSibling;
+
+        //获取上一个兄弟节点
+        var previous=span.previousElementSibling||span.previousSibling;
+        console.log.(next);
+        console.log(previous);
+    }
+</script>
+<script type="text/html">
+
+    window.onload=function () {
+        var box=document.getElementById("box");
+        //第一个子节点的获取
+        console.log(box.firstElementChild||box.firstChild);
+
+       //获取最后一个子节点
+        console.log(box.lastElementChild || box.lastChild);
+
+    }
+</script>
+<script>
+    wiindow.onload=function () {
+        var box=document.getElementById("box");
+        // 获取全部子节点
+        /*var allNodeList=box.childNodes;
+        console.log(allNodeList);
+        var newList=[];
+        for(var i=0;i<allNodeList.length;i++){
+            var node=allNodeList[i];
+            if(node.nodeType===1)
+            {
+                newList.push(node)//未完成！！！！！！！！！！！
+            }
+        }*/
+
+    }
+
+</script>
+</body>
+</html>
