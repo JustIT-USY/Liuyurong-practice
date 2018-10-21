@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:600px;
+            height: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" >
+      <p  id="word">hhh</p>
+       <button  id="btn">点我</button>
+       <img src="img/img1.jpg" alt="图片">
+</div>
+<script type="text/html">
+    window.onload=function () {
+        //CRUD（增删改查）
+
+        var box=document.getElementByClassName("box")[0];
+        //1.节点创建，增
+        var img=document.createElement("img");
+        img.src="img/img1.jpg";
+        //box.appendChild(img);//向盒子底部插入标签
+        var btn=document.getElementsByTagName("buttin")[0];
+        box.insertBefore(img,btn);//向指定标签之前插入标签
+
+        //2.删除节点   拿到节点（即查询节点），删除remove
+        var word =document.getElementById("word");
+        //word.parentNode.removeChild(word);//自杀
+        word.remove();
+        var btn =document.getElementById("btn");
+        btn.remove();
+
+    }
+</script>
+<script type="text/html">
+    window.onload=function () {
+        //新节点=要复制的节点.cloneNode（参数）；参数可选复制节点
+        var box=document.getElementsByClassName("box")[0];
+        //var newTag=box.cloneNode(false);  浅拷贝
+        var  newTag=box.cloneNode(true);//深拷贝，区别为传值
+        console.log(newTag);
+
+        document.body.appendChild(newTag);//插入
+    }
+</script>
+<script type="text/html">
+    window.onload=function () {
+        //获取节点属性(节点.属性)
+        var img=document.getElementsByTagName("img")[0];
+        /*//1.获取 getAttritube（名称）
+        console.log(img.getAttribute("src"));//better
+        console.log(img.getAttribute("alt"));
+        //console.log(img.src);等价于
+        //console.log(img.alt);等价于*/
+
+        //2.设置，setAttribute（名称，值）
+        img.setAttribute("src","img/img1.jpg");
+
+        //3.删除  removeAttribute（名称）
+        img.removeAttribute("src");
+
+
+    }
+</script>
+</body>
+</html>
