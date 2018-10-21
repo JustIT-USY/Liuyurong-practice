@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜数程序</title>
+</head>
+<body>
+<p>计科1701刘玉蓉</p>
+<script>
+    //1.生成一个0~5之间的随机数
+    randomNumber=Math.floor(Math.random()*6);
+    console.log(randomNumber);
+    //2.输入猜的数字
+    var enterNumber=prompt('请输入一个0~5之间的随机数：');
+    //3.通过if函数，进行猜数对错判断
+    while(enterNumber!=randomNumber)
+    {
+    if(enterNumber>randomNumber){
+        enterNumber=prompt('sorry,你猜大了，请再输入一个数字：');
+
+    }
+     else{
+            enterNumber=prompt('sorry,你猜小了，请再输入一个数字：');
+        };
+    }
+        alert("恭喜你，猜对了！");
+
+</script>
+</body>
+</html>
