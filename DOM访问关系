@@ -81,23 +81,37 @@
 
     }
 </script>
-<script>
+<script type="text/html">
     wiindow.onload=function () {
         var box=document.getElementById("box");
         // 获取全部子节点
-        /*var allNodeList=box.childNodes;
+        var allNodeList=box.childNodes;
         console.log(allNodeList);
         var newList=[];
         for(var i=0;i<allNodeList.length;i++){
             var node=allNodeList[i];
             if(node.nodeType===1)
             {
-                newList.push(node)//未完成！！！！！！！！！！！
+                newList.push(node)
             }
-        }*/
-
+        }
+       console.log(newList);
     }
+     //children获取全部子节点（只获取元素节点，不获取文本节点，空节点）
+    window.onload=function () {
+    var box=document.getElementById("box");
+    var nodeList=box.children;
+    console.log(nodeList);
+    }
+   
 
+</script>
+<script type="text/html" >
+    //获取任意兄弟节点
+    window.onload=function () {
+        var mt=document.getElementsByClassName("mt")[0];
+        console.log(mt.parentNode.chirdren);
+    }
 </script>
 </body>
 </html>
