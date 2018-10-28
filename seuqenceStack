@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include"static.h"
+#include"status.h"
+//括号匹配的检验
+int main(){
+    ElemType c,e;
+    Stack S;
+    InitStack(S);
+    int flag=1;
+    while(flag){
+        c=getchar();
+        switch(c){
+            case '\n':flag=0;break;
+            case '(':Push(S,c);break;
+            case '[':Push(S,c);break;
+            case '{':Push(S,c);break;
+            case ')':if(GetTop(S,e)==OK){
+                if(e=='(')Pop(S,e);
+                else{
+                    printf("出错！");flag=0;
+                }
+            }
+            else{
+                printf("出错！");flag=0;
+            }
+            break;
+            case ']':if(GetTop(S,e)==OK){
+                if(e=='[')Pop(S,e);
+                else{
+                    printf("出错！");flag=0;
+                }
+            }
+            else{
+                printf("出错！");flag=0;
+            }
+            break;
+            case '}':if(GetTop(S,e)==OK){
+                if(e=='{')Pop(S,e);
+                else{
+                    printf("出错！");flag=0;
+                }
+            }
+            else{
+                printf("出错！");flag=0;
+        }
+        break;
+    }
+
+}
