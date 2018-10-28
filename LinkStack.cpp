@@ -1,3 +1,4 @@
+#include"static.h"
 void InitLinkStack(LinkStack &S){
        //将链式栈S初始化为空
        S=NULL;
