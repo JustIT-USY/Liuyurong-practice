@@ -1,3 +1,5 @@
+
+
 (function(){
     //1.调用选项卡
     tab();
@@ -32,7 +34,7 @@
         $('elevator').onclick=function () {
             buffer(document.documentElement,{scrollTop:0},null);
         }
-    }
+    };
 
     //5.监听点击按钮
     $("login").onclick=function () {
@@ -44,7 +46,7 @@
 
     //6.广告轮播
     bannerAutoPlay();
-})(womdow);
+})(window);
 
 function autoCreateImg() {
     //1.1数据
@@ -111,7 +113,7 @@ function bannerAutoPlay() {
         buffer(lis[index],{opacity:1},null);
         //2.2索引++
         index++;
-        if(index==lis.length){
+        if(index===lis.length){
             index=0;
         }
     },3000);
@@ -136,13 +138,13 @@ function tab() {
              this.className="current";
              doms[i].style.display="block";
              //3.赋值
-             lastOne=i;
+             lastOne = i;
          }
         })(i);
     }
 }
 
 function $(id) {
-    return typeof id === "String"?document.getElementById(id):  null
+    return typeof id === "string"?document.getElementById(id):  null
 }
 
