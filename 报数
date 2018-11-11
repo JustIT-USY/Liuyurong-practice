@@ -1,0 +1,102 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void d(int a[],int n);
+int e(int a[],int h[],int j,int k);
+int main()
+{
+	int a[13]={1,2,3,1,2,3,1,2,3,1,2,3,1};
+	int h[10]={0};
+	int i,j=0,k=0,n;
+	int l=3,b=3;
+	do
+	{
+	j=e(a,h,j,k);
+    n=13-h[j-1];
+    d(a,n);
+    j=0;
+    l--;
+	 } while(l!=0);
+	 
+    e(a,h,j,k);
+    for(i=0;i<13;i++)
+	{
+        if(a[i]!=0)
+		if(b<=3)
+			{
+				a[i]=b;
+				b++;
+			}
+		    if(b==5)
+		    b=2;
+	} 
+	e(a,h,j,k);
+    for(i=13;i>=0;i--)
+    {
+    	if(a[i]!=0)
+    	{
+		if(a[i]==2)
+    	{
+    		for(i--;i>=0;i--)
+    		if(a[i]!=0)
+    		a[i]=3;
+		}
+		else
+		a[i]=3;
+	    }
+	}
+	e(a,h,j,k);
+    
+
+    
+	for(i=0;i<13;i++)
+	printf("%d  ",a[i]);	
+}
+
+void d(int a[],int n)
+{
+	int i,b=3;
+	if(n!=5)
+    for(i=0;i<13;i++)
+    	{
+           if(a[i]!=0)
+		   	 if(b-1<=3)
+		   	 {
+				a[i]=b-1;
+				b++;}
+
+		    if(b==5)
+		    b=2;
+		    
+		}
+	else
+    for(i=0;i<13;i++)
+	{
+        if(a[i]!=0)
+		if(b<=3)
+			{
+				a[i]=b;
+				b++;
+			}
+		    if(b==5)
+		    b=2;
+			
+		
+	}
+}
+
+int e(int a[],int h[],int j,int k)
+{
+	int i;
+	for(i=0;i<13;i++)
+	{
+		
+		if(a[i]==3)
+        {
+		a[i]=0;
+        h[k]=i;
+        k++;j++;
+		}
+	}
+	return j;
+}
