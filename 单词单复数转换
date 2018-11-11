@@ -36,7 +36,7 @@ int main()
 			};break;
 		default:word[i]='s';word[i+1]='\0';break; 	
 	}	
-	printf("输出单词的复数形式："); 
+	printf("现在输出单词的复数形式："); 
 	puts(word);
 	return 0;
 } 
