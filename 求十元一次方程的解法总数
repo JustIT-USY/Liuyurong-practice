@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+//枚举
+
+int main()
+{
+    int a[9];                 //a[0]~a[8]代表A-I
+    int sum=0;
+    double num=0;
+    for(a[0]=1;a[0]<=9;a[0]++)
+    {
+        for(a[1]=1;a[1]<=9;a[1]++)
+        {
+            if(a[1]==a[0])
+               continue;
+            for(a[2]=1;a[2]<=9;a[2]++)
+            {
+                if(a[2]==a[1]||a[2]==a[0])
+                   continue;
+                for(a[3]=1;a[3]<=9;a[3]++)
+                {
+                    if(a[3]==a[2]||a[3]==a[1]||a[3]==a[0])
+                      continue;
+                    for(a[4]=1;a[4]<=9;a[4]++)
+                    {
+                        if(a[4]==a[3]||a[4]==a[2]||a[4]==a[1]||a[4]==a[0])
+                           continue;
+                        for(a[5]=1;a[5]<=9;a[5]++)
+                        {
+                            if(a[5]==a[4]||a[5]==a[3]||a[5]==a[2]||a[5]==a[1]||a[5]==a[0])
+                               continue;
+                            for(a[6]=1;a[6]<=9;a[6]++)
+                            {
+                                if(a[6]==a[5]||a[6]==a[4]||a[6]==a[3]||a[6]==a[2]||a[6]==a[1]||a[6]==a[0])
+                                   continue;
+                                for(a[7]=1;a[7]<=9;a[7]++)
+                                {
+                                    if(a[7]==a[6]||a[7]==a[5]||a[7]==a[4]||a[7]==a[3]||a[7]==a[2]||a[7]==a[1]||a[7]==a[0])
+                                       continue;
+                                    for(a[8]=1;a[8]<=9;a[8]++)
+                                    {
+                                        if(a[8]==a[7]||a[8]==a[6]||a[8]==a[5]||a[8]==a[4]||a[8]==a[3]||a[8]==a[2]||a[8]==a[1]||a[8]==a[0])
+                                           continue;
+                                        num=(double)a[0]+(double)a[1]/a[2]+(double)(a[3]*100+a[4]*10+a[5])/(a[6]*100+a[7]*10+a[8]);
+                                        if(num==10.0)
+                                          sum++;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    printf("The sum is %d.\n",sum);
+    return 0;
+}
