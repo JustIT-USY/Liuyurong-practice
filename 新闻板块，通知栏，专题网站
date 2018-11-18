@@ -1,0 +1,54 @@
+<!--新闻资讯-->
+<div class="middle-left">
+                <h2 class="title-news">新闻资讯<span>/ NEWS</span><a href="#" class="more-news">MORE</a></h2>
+                   <section class="new-lef" id="news-lef">
+                   <a href="#" target="_blank"><img src="img01" ><h3>text</h3></a>
+                   <p>描述性文字</p>
+                   </section>
+                   <section class="news-rig" id="news-rig">
+                   <li><a href="#" target="_blank">text1</a></li>
+                   <li><a href="#" target="_blank">text2</a></li>
+                   <li><a href="#" target="_blank">text3</a></li>
+                   <li><a href="#" target="_blank">text4</a></li>
+                   </section>
+</div>
+
+
+<!--公告栏-->
+<div class="middle-right">
+                <h2 class="title-tongzhi">通知栏<span>/ EXHIBITION</span><a href="#" class="more-tongzhi">MORE</a></h2>
+                <ul class="mid-rig">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+ </div>
+
+
+<!--待定-->
+<div class="daiding">
+<section class="">
+<h2 class=""><a herf="#" target=""></a></h2>
+<ul>
+<li><span></span><a href="#"></a></li>
+<li><span></span><a href="#"></a></li>
+</ul>
+</section>
+</div>
+ 
+
+<!--专题网站,悬浮效果学不会orz-->
+<div class="website">
+<section class="website">             
+<ul id="web">
+  <li><a><img src="images/zt_icon.svg"><span>专题网站</span></a></li>
+ <li><a href="#" target="_blank"><img src="img" ><span>text01</span></a></li>
+ <li><a href="#" target="_blank"><img src="img" ><span>text02</span></a></li>
+ <li><a href="#" target="_blank"><img src="img" ><span>text03</span></a></li>
+ <li><a href="#" target="_blank"><img src="img" ><sapn>text04</span></a></li>
+</ul>
+</section>
+<div>
